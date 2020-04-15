@@ -11,4 +11,8 @@ Takeaways:
 > The decorator pattern is about adding additional features to an existing object easily.
 > The object to be decorated (the one being passed into decorators) and objects returned from decorators have to obey the same interface.
 
+### Link
+
+https://www.sihui.io/design-pattern-decorator/
+
 
