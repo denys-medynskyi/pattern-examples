@@ -39,6 +39,3 @@ Each handler:
 ### Links
 - https://refactoring.guru/design-patterns/chain-of-responsibility/ruby/example
 - http://rubyblog.pro/2017/11/chain-of-responsibility-ruby
-
-
-- Use the pattern when it’s essential to execute several handlers in a particular order.
