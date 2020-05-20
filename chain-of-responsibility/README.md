@@ -7,6 +7,8 @@ Each handler:
 - can stop the execution chain
 - contains logic for handling
 
+![0-img](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/structure-2x.png)
+
 ![img](https://refactoring.guru/images/patterns/content/chain-of-responsibility/chain-of-responsibility-2x.png)
 
 ![img-2](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/solution1-en-2x.png)
