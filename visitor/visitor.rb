@@ -28,20 +28,6 @@ class Tax
   end
 end
 
-class Order
-  def initialize
-    @elements = []
-  end
-
-  def add(element)
-    @elements << element
-  end
-
-  def accept(visitor)
-    @elements.each { |element| visitor.visit(element) }
-  end
-end
-
 # abstract class
 class Visitor
   def visit(subject)
@@ -61,8 +47,5 @@ end
 product = Product.new(name: 'laptop', price: 50)
 tax = Tax.new(price: 10)
 
-order = Order.new
-order.add(product)
-order.add(tax)
-
-order.accept(Printer.new)
+product.accept(Printer.new)
+tax.accept(Printer.new)
