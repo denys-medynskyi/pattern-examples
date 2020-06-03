@@ -10,6 +10,14 @@ Bridge is
 
 Solving problem with inheritance replacement with class composition.
 
+### Problem
+
+![img](https://refactoring.guru/images/patterns/diagrams/bridge/problem-en-2x.png)
+
+### Solution
+
+![img](https://refactoring.guru/images/patterns/diagrams/bridge/solution-en-2x.png)
+
 ### Abscraction
 - high-level control layer
 - does't do any work
