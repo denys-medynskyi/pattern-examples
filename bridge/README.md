@@ -7,7 +7,9 @@ Bridge is
 - **HOW**🤔: 2 hierarchies: abscraction and implementation
 - **WHY COOL**😎: hierarchies can be implemented independently
 - **References**: composition over inheritance
-- ![img](https://refactoring.guru/images/patterns/content/bridge/bridge-2x.png)
+- Implementation is granular
+- Abscraction is concrete
+- ![img](https://refactoring.guru/images/patterns/diagrams/bridge/structure-en-2x.png)
 
 Solving problem with inheritance replacement with class composition.
 
