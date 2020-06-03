@@ -1,6 +1,5 @@
 module Visitable
   def accept(visitor)
-    # Visitor.new.visit(order)
     visitor.visit(self)
   end
 end
