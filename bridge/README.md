@@ -6,6 +6,7 @@ Bridge is
 - **WHEN**⏰: when class has several dimensions(shape / form)
 - **HOW**🤔: 2 hierarchies: abscraction and implementation
 - **WHY COOL**😎: hierarchies can be implemented independently
+- **References**: composition over inheritance
 - ![img](https://refactoring.guru/images/patterns/content/bridge/bridge-2x.png)
 
 Solving problem with inheritance replacement with class composition.
@@ -17,6 +18,7 @@ Solving problem with inheritance replacement with class composition.
 ### Solution
 
 ![img](https://refactoring.guru/images/patterns/diagrams/bridge/solution-en-2x.png)
+![img](https://refactoring.guru/images/patterns/diagrams/bridge/example-en-2x.png)
 
 ### Abscraction
 - high-level control layer
@@ -28,4 +30,4 @@ Solving problem with inheritance replacement with class composition.
 
 ### Links
 - https://refactoring.guru/design-patterns/bridge
-
+- https://simpleprogrammer.com/design-patterns-simplified-the-bridge-pattern/
