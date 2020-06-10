@@ -1,33 +1,68 @@
-class Cake
-  attr_accessor :ingredient
-
-  def bake
-    create_cake
-    summary
+require 'json'
+# 1st iteration
+class ReportGenerator
+  def self.generate(data, type)
+    if type == 'csv'
+      # do csv
+      result = data.keys.join(",") + "\n"
+      result += data.values.join(",") + "\n"
+    elsif type == 'json'
+      # do json
+      data.to_json
+    end
   end
+end
 
-  private
-
-  def create_cake
+# 2nd iteration
+class Formatter
+  def format
     fail NotImplementedError
   end
+end
 
-  def summary
-    puts "Cake with #{ingredient} is baked"
+class CSVFormatter < Formatter
+  def format(data)
+    result = data.keys.join(",") + "\n"
+    result += data.values.join(",") + "\n"
   end
 end
 
-class ChocolateCake < Cake
-  def create_cake
-    @ingredient = 'chocolate'
+class JSONFormatter < Formatter
+  def format(data)
+    data.to_json
   end
 end
 
-class CheeseCake < Cake
-  def create_cake
-    @ingredient = 'cheese'
+class ReportGenerator
+  def self.generate(data, type)
+    if type == 'csv'
+      CSVFormatter.new.format(data)
+    elsif type == 'json'
+      JSONFormatter.new.format(data)
+    end
   end
 end
 
-ChocolateCake.new.bake
-CheeseCake.new.bake
+# 3rd iteration
+class FormatterFactory
+  def self.for(type)
+    case type
+    when 'csv'
+      CSVFormatter.new
+    when 'json'
+      JSONFormatter.new
+    else
+      fail 'Unsupported type'
+    end
+  end
+end
+
+class ReportGenerator
+  def self.generate(data, type)
+    FormatterFactory.for(type).format(data)
+  end
+end
+
+report_data = { foo_key: "foo", bar_key: "bar", baz_key: "baz" }
+puts ReportGenerator.generate(report_data, 'csv')
+puts ReportGenerator.generate(report_data, 'json')

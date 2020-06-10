@@ -10,3 +10,4 @@ Factory method is a creational pattern that provides an interface in superclass 
 ### Links
 
 https://refactoring.guru/design-patterns/factory-method
+http://rubyblog.pro/2016/10/factory-method-pattern-in-ruby
