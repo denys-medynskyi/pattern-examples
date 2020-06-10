@@ -4,7 +4,7 @@ Factory method is a creational pattern that provides an interface in superclass 
 
 ### General diagram
 
-![img](https://refactoring.guru/images/patterns/diagrams/factory-method/solution2-en-2x.png)
+![img](https://refactoring.guru/images/patterns/diagrams/factory-method/structure-2x.png)
 
 
 ### Links
