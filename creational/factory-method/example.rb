@@ -33,6 +33,7 @@ class JSONFormatter < Formatter
   end
 end
 
+<<<<<<< Updated upstream
 class ReportGenerator
   def self.generate(data, type)
     if type == 'csv'
@@ -40,6 +41,10 @@ class ReportGenerator
     elsif type == 'json'
       JSONFormatter.new.format(data)
     end
+=======
+  def summary
+    puts "Cake with #{cake.ingredient} is baked"
+>>>>>>> Stashed changes
   end
 end
 
