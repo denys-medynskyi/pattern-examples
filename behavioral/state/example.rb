@@ -12,11 +12,15 @@ class Post
     state.next_state
   end
 
+  def humanize_state
+    state.class.name
+  end
+
   def show_content
     if state.published?
       content
     else
-      "Content is not published. Status: #{state.class.name}"
+      "Content is not published. Status = #{humanize_state}"
     end
   end
 end
@@ -45,16 +49,6 @@ class Draft < State
   end
 
   def next_state
-    post.state = Moderated.new(post)
-  end
-end
-
-class Moderated < State
-  def published?
-    false
-  end
-
-  def next_state
     post.state = Published.new(post)
   end
 end
@@ -68,8 +62,8 @@ end
 # printing
 
 post = Post.new('I am content')
+p post.humanize_state
 p post.show_content
 post.next_state
-p post.show_content
-post.next_state
+p post.humanize_state
 p post.show_content
