@@ -1,18 +1,19 @@
 # Protects access to the object
-class Folder
-  def self.create(name)
+class FolderFactory
+  def create(folder_name)
   end
 end
 
-class FolderProxy
-  def initialize(user)
+class FolderFactoryProxy
+  def initialize(user, folder_factory)
     @user = user
+    @folder_factory = folder_factory
   end
 
   def create(folder_name)
-    raise 'Only Admin can create it' unless user.is_admin?
+    raise 'Only Admin can create it' unless @user.is_admin?
 
-    Folder.create(folder_name)
+    @folder_factory.create(folder_name)
   end
 end
 

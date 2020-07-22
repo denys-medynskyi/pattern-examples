@@ -1,4 +1,4 @@
-# Creates an expensive object on demand
+# Prevents from creating expensive object.
 class TextDocument
   def load
     images.each(&:load)
