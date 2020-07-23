@@ -1,16 +1,16 @@
 ### Memento
 - behavioral pattern which allows to restore an object to its previous state.
 
-Consists of 3 classes:
-- Originator: tracks versions. Knows how to take a snapshot and get snapshot.
-- - saves version - creates Memento
-- - restores version from Memento
+### Parts:
+Originator: tracks versions
+- saves version - creates Memento
+- restores version from Memento
 
-- Memento: actual individual versions(snapshots)
-- - value object
+Memento: actual individual version
+- value object
 
-- Caretaker: stores all versions.
-- - can get any Memento by date
+Caretaker: stores all versions.
+- can get any Memento by date
 
 ### Example
 Originator: `Post`
